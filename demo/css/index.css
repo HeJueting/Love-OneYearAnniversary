@@ -1,0 +1,205 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+}
+
+@font-face {
+    font-family: 'Font';
+    src: url('../public/Font.TTF');
+}
+
+
+
+/* 第一页 */
+.fist-page {
+    background: #282c34;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+/* 页面离开动画 */
+@keyframes firstPage-out {
+    0% {opacity: 1;}
+    100% {opacity: 0;}
+}
+@-webkit-keyframes firstPage-out {
+    0% {opacity: 1;}
+    100% {opacity: 0;}
+}
+@-moz-keyframes firstPage-out {
+    0% {opacity: 1;}
+    100% {opacity: 0;}
+}
+/* 桃心离开动画 */
+@keyframes firstPage-heart-out {
+    0% {transform: scale(1.1);opacity: 1;}
+    100% {transform: scale(2);opacity: 0;}
+}
+@-webkit-keyframes firstPage-heart-out {
+    0% {transform: scale(1.1);opacity: 1;}
+    100% {transform: scale(2);opacity: 0;}
+}
+@-moz-keyframes firstPage-heart-out {
+    0% {transform: scale(1.1);opacity: 1;}
+    100% {transform: scale(2);opacity: 0;}
+}
+/* 数字翻牌离开动画 */
+@keyframes firstPage-number-out {
+    0% {transform: scale(1);opacity: 1;}
+    100% {transform: scale(2);opacity: 0;}
+}
+@-webkit-keyframes firstPage-number-out {
+    0% {transform: scale(1);opacity: 1;}
+    100% {transform: scale(2);opacity: 0;}
+}
+@-moz-keyframes firstPage-number-out {
+    0% {transform: scale(1);opacity: 1;}
+    100% {transform: scale(2);opacity: 0;}
+}
+
+/* 桃心 */
+.fist-page .heart {
+    display: block;
+    width: 60px;
+    height: 60px;
+    margin: 0 auto;
+    fill: #fb2e59;
+    margin-top: 240px;
+    transform: scale(0);
+    opacity: 0;
+}
+@keyframes zoom {
+    0% {transform: scale(1);}
+    50% {transform: scale(1.3);}
+    100% {transform: scale(1);}
+}
+@-webkit-keyframes zoom {
+    0% {transform: scale(1);}
+    50% {transform: scale(1.3);}
+    100% {transform: scale(1);}
+}
+@-moz-keyframes zoom {
+    0% {transform: scale(1);}
+    50% {transform: scale(1.3);}
+    100% {transform: scale(1);}
+}
+/* 翻牌器 */
+.fist-page .number {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    text-align: center;
+    color: #fefefe;
+    font-size: 48px;
+    letter-spacing: 5px;
+    text-shadow: 0px 5px 5px #ccc;
+}
+
+
+
+
+
+/* 第二页 */
+.second-page {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    min-height: 100%;
+    overflow: hidden;
+    background-image: url('../public/bac.png');
+    background-size: 100% auto;
+    background-repeat: repeat;
+}
+.second-page .typing {
+    line-height: 20px;
+    color: #e6e6e6;
+    font-size: 20px;
+    font-family: 'Font';
+    font-weight: lighter;
+}
+/* 打字闪烁 */
+.typed-cursor {
+    color: #e6e6e6;
+    font-size: 20px;
+    font-family: 'Font';
+    font-weight: lighter;
+    opacity: 1;
+    -webkit-animation: blink 0.7s infinite;
+    -moz-animation: blink 0.7s infinite;
+    animation: blink 0.7s infinite;
+}
+@keyframes blink {
+    0% {opacity: 1;}
+    50% {opacity: 0;}
+    100% {opacity: 1;}
+}
+@-webkit-keyframes blink {
+    0% {opacity: 1;}
+    50% {opacity: 0;}
+    100% {opacity: 1;}
+}
+@-moz-keyframes blink {
+    0% {opacity: 1;}
+    50% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+
+
+
+/* 音乐播放器 */
+.musicIcon {
+    position: fixed;
+    left: 20px;
+    bottom: 20px;
+    width: 35px;
+    height: 35px;
+    border-radius: 100%;
+    border: 1px solid #ccc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    -webkit-animation: 5s linear 0s infinite rotate;
+    -moz-animation: 5s linear 0s infinite rotate;
+    animation: 5s linear 0s infinite rotate;
+    z-index: 2;
+}
+.musicIcon .icon {
+    fill: #ccc;
+    width: 15px;
+    height: 15px;
+}
+@keyframes rotate {
+    0% {transform: rotate(0deg);}
+    100% {transform: rotate(360deg);}
+}
+@-webkit-keyframes rotate {
+    0% {transform: rotate(0deg);}
+    100% {transform: rotate(360deg);}
+}
+@-moz-keyframes rotate {
+    0% {transform: rotate(0deg);}
+    100% {transform: rotate(360deg);}
+}
+/* 右下角logo */
+.logo {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    width: 120px;
+    opacity: 0.8;
+    z-index: 1;
+}
